@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Tests">
+    <!--<listeners>
+        <listener class-name="Listener"/>
+    </listeners>
+    <parameter name="a" value="2"/>
+    <parameter name="b" value="6"/>
+    <test name="Smoke">
+        <groups>
+            <run>
+                <include name="set1"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="test1"/>
+            <class name="test2"/>
+        </classes>
+    </test>
+    <test name="Regression">
+        <classes>
+            <class name="test2"/>
+        </classes>
+    </test>-->
+    <test name="Regression">
+        <classes>
+            <class name="DataViewer"/>
+        </classes>
+    </test>
+
+</suite>
