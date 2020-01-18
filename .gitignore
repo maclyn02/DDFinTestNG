@@ -1,4 +1,4 @@
 .idea/
 target/
-.iml
+QAMastersTestNGProject.iml
 src/test/java/Config.java
