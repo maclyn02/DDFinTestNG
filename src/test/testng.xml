@@ -8,7 +8,7 @@
     </listeners>
     -->
 
-    <!--Test with groups,parameters,dependencies and XLS data
+    <!--Test with groups,parameters,dependencies and XLS data-->
     <parameter name="a" value="2"/>
     <parameter name="b" value="6"/>
     <test name="Smoke">
@@ -22,7 +22,6 @@
             <class name="TestPackage.Tests.PrintStringTest2"/>
         </classes>
     </test>
-    -->
 
     <!--Basic test
     <test name="Functional">
@@ -32,9 +31,12 @@
     </test>
     -->
     <!--Test for MYSQL data provider-->
+    <!--
     <test name="DatabaseTest">
         <classes>
             <class name="TestPackage.Tests.MysqlTest"/>
         </classes>
     </test>
+    -->
+
 </suite>

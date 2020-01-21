@@ -1,7 +1,8 @@
 package TestPackage.Tests;
 
 import TestPackage.Utils.MysqlConnector;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -14,7 +15,7 @@ import java.util.Iterator;
 
 public class MysqlTest {
 
-    private static final Logger log = Logger.getLogger("MyLogger");
+    public static Logger log = LogManager.getLogger("MyLogger");
 
     @Test(groups = {"database"},dataProvider = "getData")
     public void addNumbers(int a,int b) {
