@@ -15,7 +15,7 @@ import java.util.Iterator;
 
 public class MysqlTest {
 
-    public static Logger log = LogManager.getLogger("MyLogger");
+    public static Logger log = LogManager.getLogger(MysqlTest.class);
 
     @Test(groups = {"database"},dataProvider = "getData")
     public void addNumbers(int a,int b) {

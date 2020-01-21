@@ -1,15 +1,15 @@
 package TestPackage.Tests;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-
 //@Listeners(Listener.class)
 public class PrintStringsTest1 {
 
-    public static Logger log = Logger.getLogger("MyLogger");
+    public static final Logger log = LogManager.getLogger(PrintStringsTest1.class);
 
     @Test(groups = {"set1","set2"},dependsOnMethods = {"longTest1","mediumTest1"})
     @Parameters({"a","b"})
