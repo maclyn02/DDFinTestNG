@@ -1,6 +1,7 @@
 package TestPackage.Tests;
 
 import TestPackage.Utils.MysqlConnector;
+import org.apache.log4j.Logger;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -13,8 +14,11 @@ import java.util.Iterator;
 
 public class MysqlTest {
 
+    private static final Logger log = Logger.getLogger("MyLogger");
+
     @Test(groups = {"database"},dataProvider = "getData")
     public void addNumbers(int a,int b) {
+        log.info("-------inside addNumbers-----------");
         System.out.println(a+" + "+b+" = "+a+b);
     }
 
@@ -33,6 +37,7 @@ public class MysqlTest {
 
     public ArrayList<Object[]> getMySqlData() throws SQLException{
 
+        log.warn("---------creating external connection------------");
         //Initiate Connection
         MysqlConnector connector = new MysqlConnector();
         Connection conn = connector.getConnector();

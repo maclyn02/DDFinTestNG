@@ -1,16 +1,20 @@
 package TestPackage.Tests;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
 
 //@Listeners(Listener.class)
 public class PrintStringsTest1 {
 
+    public static Logger log = Logger.getLogger("MyLogger");
+
     @Test(groups = {"set1","set2"},dependsOnMethods = {"longTest1","mediumTest1"})
     @Parameters({"a","b"})
     public void shortTest1(int a , int b){
+        log.info("------------ADDING-------------");
         System.out.println("Short : "+(a+b));
     }
 
@@ -27,7 +31,8 @@ public class PrintStringsTest1 {
 
     @Test(groups = {"set1","set2"})
     public void mediumTest1(){
-        Assert.assertTrue(false);
+        log.warn("-----------ASSERTING-----------");
+        //Assert.assertTrue(false);
         System.out.println("Medium : 111-111");
     }
 
