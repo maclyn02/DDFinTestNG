@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Tests">
-    <!--<listeners>
-        <listener class-name="Listener"/>
+
+    <!--Global Listener
+    <listeners>
+        <listener class-name="TestPackage.Listeners.Listener"/>
     </listeners>
+    -->
+
+    <!--Test with groups,parameters,dependencies and XLS data
     <parameter name="a" value="2"/>
     <parameter name="b" value="6"/>
     <test name="Smoke">
@@ -13,19 +18,23 @@
             </run>
         </groups>
         <classes>
-            <class name="test1"/>
-            <class name="test2"/>
+            <class name="TestPackage.Tests.PrintStringsTest1"/>
+            <class name="TestPackage.Tests.PrintStringTest2"/>
         </classes>
     </test>
-    <test name="Regression">
-        <classes>
-            <class name="test2"/>
-        </classes>
-    </test>-->
-    <test name="Regression">
-        <classes>
-            <class name="DataViewer"/>
-        </classes>
-    </test>
+    -->
 
+    <!--Basic test
+    <test name="Functional">
+        <classes>
+            <class name="TestPackage.Tests.PrintStringTest2"/>
+        </classes>
+    </test>
+    -->
+    <!--Test for MYSQL data provider-->
+    <test name="DatabaseTest">
+        <classes>
+            <class name="TestPackage.Tests.MysqlTest"/>
+        </classes>
+    </test>
 </suite>

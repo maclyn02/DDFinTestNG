@@ -1,10 +1,14 @@
+package TestPackage.Tests;
+
+import TestPackage.Config;
+import TestPackage.Utils.XLS_Reader;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class DataViewer {
+public class DataViewerTest {
 
     @Test(dataProvider = "getData")
     public void test_method(String a, String b){
@@ -26,7 +30,7 @@ public class DataViewer {
 
         ArrayList<Object[]> data=new ArrayList<Object[]>();
 
-        Utils.XLS_Reader r = new Utils.XLS_Reader(Config.xlsFilePath);
+        XLS_Reader r = new XLS_Reader(Config.xlsFilePath);
         int rowCount = r.getRowCount("Sheet1");
         for(int i=2;i<=rowCount;i++)
         {
